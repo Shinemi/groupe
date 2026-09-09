@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <!-- <meta name="author" content="Professeur Tournesol"> -->
     <!-- <meta name="description" content="Voiture de luxe et bermudas"> -->
-    <meta name="keywords" content="pâtisserie, gâteau, tarte, macaron, éclair, chocolat, dessert, boulangerie, brioche, cookies, muffin, crêpe, croissant, beignet, glaçage, fondant, viennoiserie, galette, madeleine, meringue">
-    <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
+    <meta name="keywords" content=
+                                    "pâtisserie, 
+                                    gâteau, 
+                                    tarte, 
+                                    macaron, 
+                                    éclair, 
+                                    chocolat, 
+                                    dessert, 
+                                    boulangerie, 
+                                    brioche, 
+                                    cookies, 
+                                    muffin, 
+                                    crêpe, 
+                                    croissant, 
+                                    beignet, 
+                                    glaçage, 
+                                    fondant, 
+                                    viennoiserie, 
+                                    galette, 
+                                    madeleine, 
+                                    meringue"
+        >
     <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,45 +35,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <script src="css/bootstrap/bootstrap.bundle.js"></script>
-    <script src="css/bootstrap/bootstrap.bundle.min.js"></script>
-    <title>Cookie Cookie</title>
 </head>
+
 <body>
-    <div class="header">
-        <h1 style="visibility: hidden;">Cookie Cookie Shop</h1>
-        <a href="/">
-            <i class="fa-solid fa-cookie-bite"></i>
-            <p href="https://storycom.github.io/Cookie-Cookie/">Cookie Cookie</p>
+    <header>
+        <div class="header-content">
+        <a class="brand" href="https://storycom.github.io/Cookie-Cookie/" aria-label="Cookie Cookie, accueil">
+            <i class="fa-solid fa-cookie-bite" aria-hidden="true"></i>
+            <span>Cookie Cookie</span>
         </a>
 
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
+        <button type="button" class="menu-toggle" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
+        <nav aria-label="Navigation principale">
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
 
-        <ul id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </ul>
+            <button type="button" id="cart" aria-label="Ouvrir le panier" aria-controls="cart-content">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            </button>
+        </nav>
 
-        <i id="Cart" class="fa-solid fa-cart-shopping"></i>
+        
 
-        <div id="cart-content" style="display: none;">
-            <button id="close-cart">X</button>
-            <h3>Mon panier</h3>
+        <aside id="cart-content" aria-labelledby="cart-title" style="display: none;">
+            <button type="button" id="close-cart" aria-label="Fermer le panier">X</button>
+            <h2 id="cart-title">Mon panier</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total"></span></p>
             <div class="buttonzone">
-                <button id="clear-cart">Vider le panier</button>
-                <button id="checkout">Valider la commande</button>
+                <button type="button" id="clear-cart">Vider le panier</button>
+                <button type="button" id="checkout">Valider la commande</button>
             </div>
+        </aside>
         </div>
-    </div>
+    </header>
 
 
     <div id="main-content">
@@ -168,6 +188,8 @@
         </span>
     </main>
 </body>
+
+
 <div class="footer">
     <a href="/">
         <i class="fa-solid fa-cookie-bite"></i>
