@@ -491,14 +491,14 @@ header {
 
 footer {
   margin-top: 80px;
-  padding-block: 50px;
+  padding: 50px;
 
   background-color: var(--black);
   color: var(--white);
 
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 
     .brand {
@@ -515,45 +515,56 @@ footer {
       }
     }
 
-    nav {
+    .about_us{
+      ul{
+        list-style: none;
+
+        .coordonnees{
+          margin-bottom: 10px;
+        }
+      }      
+    }
+
+    .credentials {
+      display: grid;
+      gap: 16px;
+      text-align: center;
+
       ul {
         display: grid;
         gap: 10px;
         list-style: none;
-      }
+        a {
+          color: var(--white);
 
-      a {
-        color: var(--white);
-
-        &:hover {
-          color: var(--secondary-color);
+          &:hover {
+            color: var(--secondary-color);
+          }
         }
       }
-    }
+      article{
+        margin-top: 10px;
+        .social-media {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px;
 
-    .social-links {
-      display: flex;
-      gap: 16px;
+          width: 40px;
+          height: 40px;
 
-      a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+          border-radius: 4px;
 
-        width: 40px;
-        height: 40px;
+          background-color: var(--white);
+          color: var(--black);
 
-        border-radius: 4px;
+          transition:
+            background-color var(--transition),
+            color var(--transition);
 
-        background-color: var(--white);
-        color: var(--black);
-
-        transition:
-          background-color var(--transition),
-          color var(--transition);
-
-        &:hover {
-          background-color: var(--main-color);
+          &:hover {
+            background-color: var(--main-color);
+          }
         }
       }
     }
