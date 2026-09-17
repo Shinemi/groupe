@@ -132,4 +132,3 @@ checkoutButton.addEventListener('click', () => {
         alert("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
     }
 });
-
