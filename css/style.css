@@ -306,6 +306,7 @@ div.tags p,
 }
 
 #cart-content {
+    display: none;
     position: absolute;
     top: calc(100% + 8px);
     right: 16px;

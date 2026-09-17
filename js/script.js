@@ -26,10 +26,9 @@ updateAnchors(links, 'nav-links');
 
 
 // Gestion du menu responsive
-document.querySelector('.menu-toggle').addEventListener('click', (event) => {
+document.querySelector('.menu-toggle').addEventListener('click', () => {
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('show');
-    event.currentTarget.setAttribute('aria-expanded', navLinks.classList.contains('show'));
 });
 
 var button = document.querySelector('#addtocart');
@@ -133,4 +132,3 @@ checkoutButton.addEventListener('click', () => {
         alert("Votre panier est vide. Ajoutez des articles avant de valider la commande.");
     }
 });
-
