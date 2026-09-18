@@ -6,7 +6,8 @@
     <title>Cookie Cookie</title>
     <meta name="description" content="Discover Cookie Cookie, an artisan bakery offering freshly baked cookies made with quality ingredients.">
     <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Cookie Cookie</title>
 </head>
 <body>
     <header>
@@ -69,9 +70,9 @@
                 <h2>Explore our delectable cookies</h2>
                 <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
             </div>
-            <div class="products" itemscope itemtype="https://schema.org/Offer">
-                <article class="product-card">
-                    <img src="img/1.webp" alt="Chocolate chip cookie">
+            <div class="products">
+                <article class="product-card" itemscope itemtype="https://schema.org/Offer">
+                    <img itemprop="image" src="img/1.webp" alt="Chocolate chip cookie">
                     <div class="product-content">
                         <h3 itemprop="name">Chocolate Chip</h3>
                         <p>Our classic chocolate chip cookie, baked to perfection.</p>
@@ -81,8 +82,8 @@
                         </div>
                     </div>
                 </article>
-                <article class="product-card">
-                    <img src="img/2.webp" alt="Oatmeal raisin cookies">
+                <article class="product-card" itemscope itemtype="https://schema.org/Offer">
+                    <img itemprop="image"src="img/2.webp" alt="Oatmeal raisin cookies">
                     <div class="product-content">
                         <h3 itemprop="name">Oatmeal Raisin</h3>
                         <p>Chewy oatmeal cookies with plump raisins</p>
@@ -92,8 +93,8 @@
                         </div>
                     </div>
                 </article>
-                <article class="product-card">
-                    <img src="img/3.webp" alt="Peanut butter cookie">
+                <article class="product-card" itemscope itemtype="https://schema.org/Offer">
+                    <img itemprop="image" src="img/3.webp" alt="Peanut butter cookie">
                     <div class="product-content">
                         <h3 itemprop="name">Peanut Butter</h3>
                         <p>Rich and creamy peanut butter cookies.</p>
@@ -103,8 +104,8 @@
                         </div>
                     </div>
                 </article>
-                <article class="product-card">
-                    <img src="img/4.webp" alt="Sugar cookie">
+                <article class="product-card" itemscope itemtype="https://schema.org/Offer">
+                    <img itemprop="image" src="img/4.webp" alt="Sugar cookie">
                     <div class="product-content">
                         <h3 itemprop="name">Sugar Cookie</h3>
                         <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
@@ -118,7 +119,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="about-section" itemscope>
+        <section id="about" class="about-section">
             <img src="img/6.webp" alt="Artisan cookie preparation in a bakery">
             <article>
                 <p class="eyebrow">About Us</p>
