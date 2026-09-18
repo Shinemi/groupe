@@ -161,26 +161,30 @@
                 <span>Cookie Cookie</span>
             </a>
             <div class="footer-content">
-            <div class="about_us"> 
+            <div class="about_us" itemscope itemtype="https://schema.org/LocalBusiness"> 
                 <h2>About us</h2>
                 <ul>
                     <li>Adress:</li> 
-                    <li class="coordonnees">140 avenue jacques troussel, 83136 Rocbaron</li>
+                    <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="coordonnees">
+                        <span itemprop="streetAddress">140 avenue Jacques Troussel</span>,
+                        <span itemprop="postalCode">83136</span>
+                        <span itemprop="addressLocality">Rocbaron</span>
+                    </li>
                     <li>Telehone number: </li>
-                    <li class="coordonnees">05 56 67 78 89</li>
+                    <li itemprop="telephone" class="coordonnees">05 56 67 78 89</li>
                     <li>Opening hours: </li>
-                    <li>Monday to Friday, 10:00 AM to 7:00 PM.</li>
+                    <li itemprop="openingHours" content="Mo-Fr 10:00-19:00">Monday to Friday, 10:00 AM to 7:00 PM.</li>
                 </ul>
             </div>
-            <div class="credentials" itemscope>
+            <div class="credentials" itemscope itemtype="https://schema.org/Organization">
                 <article>
-                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-media">
+                    <a itemprop="sameAs" href="https://www.instagram.com/" aria-label="Instagram" class="social-media">
                         <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.facebook.com/" aria-label="Facebook" class="social-media">
+                    <a itemprop="sameAs" href="https://www.facebook.com/" aria-label="Facebook" class="social-media">
                         <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                     </a>
-                    <a href="https://x.com/" aria-label="X" class="social-media">
+                    <a itemprop="sameAs" href="https://x.com/" aria-label="X" class="social-media">
                         <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
                     </a>
                 </article>
@@ -201,7 +205,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
 </body>
 </html>
