@@ -1,44 +1,44 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Cookie — Pâtisserie artisanale</title>
-    <meta name="description" content="Découvrez Cookie Cookie, une pâtisserie artisanale proposant des cookies fraîchement préparés avec des ingrédients de qualité.">
+    <title>Cookie Cookie</title>
+    <meta name="description" content="Discover Cookie Cookie, an artisan bakery offering freshly baked cookies made with quality ingredients.">
     <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a class="brand" href="https://storycom.github.io/Cookie-Cookie/" aria-label="Cookie Cookie, accueil">
+            <a class="brand" href="https://storycom.github.io/Cookie-Cookie/" aria-label="Cookie Cookie, home">
                 <i class="fa-solid fa-cookie-bite" aria-hidden="true"></i>
                 <span>Cookie Cookie</span>
             </a>
-            <button type="button" class="menu-toggle" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">
+            <button type="button" class="menu-toggle" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
-            <nav aria-label="Navigation principale">
+            <nav aria-label="Main navigation">
                 <ul id="nav-links">
-                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#menu">Menu</a></li>
-                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button type="button" id="cart" aria-label="Ouvrir le panier" aria-controls="cart-content" aria-expanded="false">
+                <button type="button" id="cart" aria-label="Open cart" aria-controls="cart-content" aria-expanded="false">
                     <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
                 </button>
             </nav>
             <aside id="cart-content" aria-labelledby="cart-title">
-                <button type="button" id="close-cart" aria-label="Fermer le panier">
+                <button type="button" id="close-cart" aria-label="Close cart">
                     <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
-                <h2 id="cart-title">Mon panier</h2>
+                <h2 id="cart-title">My Cart</h2>
                 <ul id="cart-items"></ul>
-                <p>Total : $<span id="cart-total">0.00</span></p>
+                <p>Total: $<span id="cart-total">0.00</span></p>
                 <div class="button-zone">
-                    <button type="button" id="clear-cart">Vider le panier</button>
-                    <button type="button" id="checkout">Valider la commande</button>
+                    <button type="button" id="clear-cart">Clear Cart</button>
+                    <button type="button" id="checkout">Checkout</button>
                 </div>
             </aside>
         </div>
@@ -49,84 +49,82 @@
             <div class="hero-content">
                 <article>
                     <p class="eyebrow">Cookie Cookie</p>
-                    <h1>Des cookies délicieux, préparés avec passion</h1>
+                    <h1>Delicious cookies, made with passion</h1>
                     <p class="hero-description">
-                        Découvrez nos cookies fraîchement préparés avec des ingrédients soigneusement sélectionnés.
+                        Discover our freshly baked cookies made with carefully selected ingredients.
                     </p>
                     <div class="hero-buttons">
-                        <a class="button" href="#menu">Découvrir le menu</a>
-                        <a class="button button-light" href="#contact">Nous contacter</a>
+                        <a class="button" href="#menu">Explore the Menu</a>
+                        <a class="button button-light" href="#contact">Contact Us</a>
                     </div>
                 </article>
-                <img src="img/5.webp" alt="Assiette de cookies accompagnée d'un verre de lait">
+                <img src="img/5.webp" alt="Plate of cookies with a glass of milk">
             </div>
         </section>
 
         <!-- MENU -->
         <section id="menu" class="menu-section">
             <div class="section-heading">
-                <p class="eyebrow">Notre menu</p>
-                <h2>Découvrez nos délicieux cookies</h2>
-                <p>Une sélection de cookies fraîchement préparés, chacun avec sa propre saveur et sa propre texture.</p>
+                <p class="eyebrow">Our Menu</p>
+                <h2>Explore our delectable cookies</h2>
+                <p>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</p>
             </div>
-            <div class="products">
+            <div class="products" itemscope itemtype="https://schema.org/Offer">
                 <article class="product-card">
-                    <img src="img/1.webp" alt="Cookie aux pépites de chocolat">
+                    <img src="img/1.webp" alt="Chocolate chip cookie">
                     <div class="product-content">
-                        <h3>Chocolate Chip</h3>
-                        <p>Notre classique aux pépites de chocolat, cuit à la perfection.</p>
+                        <h3 itemprop="name">Chocolate Chip</h3>
+                        <p>Our classic chocolate chip cookie, baked to perfection.</p>
                         <div class="product-footer">
-                            <span class="price">$2.50</span>
-                            <button type="button" class="add-to-cart" data-name="Chocolate Chip" data-price="2.50">Ajouter au panier</button>
+                            <span class="price" itemprop="price">$2.50</span>
+                            <button type="button" class="add-to-cart" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
                         </div>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="img/2.webp" alt="Cookies aux flocons d'avoine et raisins secs">
+                    <img src="img/2.webp" alt="Oatmeal raisin cookies">
                     <div class="product-content">
-                        <h3>Oatmeal Raisin</h3>
-                        <p>Des cookies moelleux aux flocons d'avoine et aux raisins secs.</p>
+                        <h3 itemprop="name">Oatmeal Raisin</h3>
+                        <p>Chewy oatmeal cookies with plump raisins</p>
                         <div class="product-footer">
-                            <span class="price">$2.25</span>
-                            <button type="button" class="add-to-cart" data-name="Oatmeal Raisin" data-price="2.25">Ajouter au panier</button>
+                            <span class="price" itemprop="price">$2.25</span>
+                            <button type="button" class="add-to-cart" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
                         </div>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="img/3.webp" alt="Cookie au beurre de cacahuète">
+                    <img src="img/3.webp" alt="Peanut butter cookie">
                     <div class="product-content">
-                        <h3>Peanut Butter</h3>
-                        <p>Des cookies riches et crémeux au beurre de cacahuète.</p>
+                        <h3 itemprop="name">Peanut Butter</h3>
+                        <p>Rich and creamy peanut butter cookies.</p>
                         <div class="product-footer">
-                            <span class="price">$2.75</span>
-                            <button type="button" class="add-to-cart" data-name="Peanut Butter" data-price="2.75">Ajouter au panier</button>
+                            <span class="price" itemprop="price">$2.75</span>
+                            <button type="button" class="add-to-cart" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
                         </div>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="img/4.webp" alt="Cookie au sucre">
+                    <img src="img/4.webp" alt="Sugar cookie">
                     <div class="product-content">
-                        <h3>Sugar Cookie</h3>
-                        <p>Des cookies au sucre tendres et moelleux, parfaits pour toutes les occasions.</p>
+                        <h3 itemprop="name">Sugar Cookie</h3>
+                        <p>Soft and chewy sugar cookies, perfect for any occasion.</p>
                         <div class="product-footer">
-                            <span class="price">$2.00</span>
-                            <button type="button" class="add-to-cart" data-name="Sugar Cookie" data-price="2.00">Ajouter au panier</button>
+                            <span class="price" itemprop="price">$2.00</span>
+                            <button type="button" class="add-to-cart" data-name="Sugar Cookie" data-price="2.00">Add to Cart</button>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-
         <!-- ABOUT -->
-        <section id="about" class="about-section">
-            <img src="img/6.jpg" alt="Préparation artisanale de cookies dans une boulangerie">
+        <section id="about" class="about-section" itemscope>
+            <img src="img/6.webp" alt="Artisan cookie preparation in a bakery">
             <article>
-                <p class="eyebrow">À propos de nous</p>
-                <h2>La passion de la pâtisserie et de la tradition</h2>
-                <p>Chez Cookie Cookie, nous sommes une pâtisserie familiale qui sert sa communauté avec passion et dévouement depuis plus de 20 ans.</p>
-                <p>Nos cookies sont préparés avec des ingrédients de qualité, cuits avec soin et inspirés par la chaleur et le confort d'une pâtisserie de quartier.</p>
-                <p>Nous accordons également une grande importance à la qualité, à la durabilité et au soutien des producteurs locaux.</p>
+                <p class="eyebrow">About Us</p>
+                <h2>Baking with Passion and Tradition</h2>
+                <p>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</p>
+                <p>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</p>
             </article>
         </section>
 
@@ -134,59 +132,70 @@
         <section id="contact" class="contact-section">
             <div class="section-heading">
                 <p class="eyebrow">Contact</p>
-                <h2>Restons en contact</h2>
-                <p>Une question, une remarque ou simplement envie de nous dire bonjour ? Envoyez-nous un message.</p>
+                <h2>Get in Touch</h2>
+                <p>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</p>
             </div>
             <form class="contact-form" action="#" method="post">
                 <div class="form-field">
-                    <label for="name">Nom</label>
+                    <label for="name">Name</label>
                     <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
                 <div class="form-field">
-                    <label for="email">Adresse e-mail</label>
+                    <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" autocomplete="email" required>
                 </div>
                 <div class="form-field">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
-                <button type="submit">Envoyer</button>
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
-            <a class="brand" href="https://storycom.github.io/Cookie-Cookie/" aria-label="Cookie Cookie, accueil">
+            <a class="brand" href="https://storycom.github.io/Cookie-Cookie/" aria-label="Cookie Cookie, home">
                 <i class="fa-solid fa-cookie-bite" aria-hidden="true"></i>
                 <span>Cookie Cookie</span>
             </a>
-            <nav aria-label="Navigation secondaire">
+            <div class="footer-content">
+            <div class="about_us"> 
+                <h2>About us</h2>
                 <ul>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Politique de remboursement</a></li>
+                    <li>Adress:</li> 
+                    <li class="coordonnees">140 avenue jacques troussel, 83136 Rocbaron</li>
+                    <li>Telehone number: </li>
+                    <li class="coordonnees">05 56 67 78 89</li>
+                    <li>Opening hours: </li>
+                    <li>Monday to Friday, 10:00 AM to 7:00 PM.</li>
                 </ul>
-            </nav>
-            <div class="social-links">
-                <a href="https://www.instagram.com/" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.facebook.com/" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="https://x.com/" aria-label="X">
-                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-                </a>
+            </div>
+            <div class="credentials" itemscope>
+                <article>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" class="social-media">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" aria-label="Facebook" class="social-media">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://x.com/" aria-label="X" class="social-media">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                </article>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
             </div>
             <form class="newsletter" action="newsletter.php" method="post">
                 <h2>Newsletter</h2>
-                <label for="newsletter-name">Nom</label>
+                <label for="newsletter-name">Name</label>
                 <input type="text" id="newsletter-name" name="name" autocomplete="name" required>
-                <label for="newsletter-email">Adresse e-mail</label>
+                <label for="newsletter-email">Email Address</label>
                 <input type="email" id="newsletter-email" name="email" autocomplete="email" required>
-                <button type="submit">S'inscrire</button>
+                <button type="submit">Subscribe</button>
             </form>
         </div>
     </footer>
