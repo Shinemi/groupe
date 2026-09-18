@@ -622,8 +622,18 @@ footer {
 
   footer {
     .footer-content {
-      grid-template-columns: repeat(2, 1fr);
-    }
+      grid-template-columns: 1fr;
+
+      .about_us{
+        text-align: center;
+      }
+
+      .newsletter {
+        input {
+          width: 50%;
+        }
+      }
+    }    
   }
 }
 
