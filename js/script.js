@@ -4,8 +4,6 @@ document.querySelector('.menu-toggle').addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
 
-// Fonction qui reconstruit dynamiquement l'affichage du panier
-// Appelée à chaque fois que le panier change (ajout, suppression, vidage).
 function renderCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -18,19 +16,17 @@ function renderCart() {
 
     // Variable pour calculer le total du panier
     let total = 0;
-
     if (cart.length === 0) {
         const li = document.createElement('li');
         li.textContent = 'Votre panier est vide.';
         cartItems.appendChild(li);
+
     } else {
         // Générer un <li> pour chaque article du panier
         cart.forEach((item, index) => {
             const li = document.createElement('li');
-
             const span = document.createElement('span');
             span.textContent = `${item.name} - $${item.price}`;
-
             // Bouton pour retirer cet article précis du panier
             const removeBtn = document.createElement('button');
             removeBtn.type = 'button';
@@ -41,7 +37,6 @@ function renderCart() {
                 localStorage.setItem('cart', JSON.stringify(cart));
                 renderCart();
             });
-
             li.appendChild(span);
             li.appendChild(removeBtn);
             cartItems.appendChild(li);
@@ -62,13 +57,11 @@ function renderCart() {
 function updateCartBadge(count) {
     const cartButton = document.getElementById('cart');
     let badge = document.getElementById('cart-badge');
-
     if (!badge) {
         badge = document.createElement('span');
         badge.id = 'cart-badge';
         cartButton.appendChild(badge);
     }
-
     badge.textContent = count;
     badge.style.display = count > 0 ? 'inline-block' : 'none';
 }
@@ -81,7 +74,6 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         const productPrice = button.getAttribute('data-price');
 
         // Récupérer le panier actuel dans le localStorage
-        // (tableau vide si aucun panier n'existe encore)
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
         // Ajouter le nouveau produit au panier
@@ -98,7 +90,6 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     });
 });
 
-
 // Affichage du panier
 document.getElementById('cart').addEventListener('click', () => {
     const cartContent = document.getElementById('cart-content');
@@ -109,7 +100,6 @@ document.getElementById('cart').addEventListener('click', () => {
     // Rendre visible le panneau du panier
     cartContent.style.display = 'block';
 });
-
 
 // fermeture du panier
 const closeCartButton = document.getElementById('close-cart');
@@ -122,6 +112,7 @@ const clearCartButton = document.getElementById('clear-cart');
 clearCartButton.addEventListener('click', () => {
     // Vider le localStorage
     localStorage.removeItem('cart');
+
     // Rafraîchir dynamiquement l'affichage du panier
     renderCart();
 });
@@ -130,7 +121,6 @@ clearCartButton.addEventListener('click', () => {
 const checkoutButton = document.getElementById('checkout');
 checkoutButton.addEventListener('click', () => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
     if (cart.length > 0) {
         // Générer un ID de commande aléatoire (à titre d'exemple uniquement)
         const orderId = Math.floor(Math.random() * 1000000);
@@ -141,11 +131,10 @@ checkoutButton.addEventListener('click', () => {
         localStorage.removeItem('cart');
         renderCart();
     } else {
+
         // Empêche la validation si le panier est vide
         alert("Votre panier est vide, veuillez ajouter des articles avant de valider la commande.");
     }
 });
 
-// Affichage initial du panier au chargement de la page
-// (utile si le panier contient déjà des articles depuis une session précédente)
 document.addEventListener('DOMContentLoaded', renderCart);
