@@ -1,30 +1,3 @@
-// // Liste des liens à ajouter
-// const links = [
-//     { href: '/', text: 'Home' },
-//     { href: '/menu', text: 'Menu' },
-//     { href: '/#about', text: 'About' },
-//     { href: '/#contact', text: 'Contact' }
-// ];
-
-// // Fonction pour ajouter des destinations aux liens existants
-// function updateAnchors(links, targetElementId) {
-//     // Sélectionner l'élément cible
-//     const ul = document.getElementById(targetElementId);
-//     // Sélectionner tous les éléments <a> enfants de l'élément <ul>
-//     const anchors = ul.querySelectorAll('a');
-
-//     // Parcourir chaque lien dans la liste
-//     links.forEach((link, index) => {
-//         // Mettre à jour l'attribut href et le texte de chaque ancre
-//         anchors[index].href = link.href;
-//         anchors[index].textContent = link.text;
-//     });
-// }
-
-// // Appel de la fonction pour mettre à jour les ancres
-// updateAnchors(links, 'nav-links');
-
-
 // Gestion du menu responsive
 document.querySelector('.menu-toggle').addEventListener('click', () => {
     const navLinks = document.getElementById('nav-links');
